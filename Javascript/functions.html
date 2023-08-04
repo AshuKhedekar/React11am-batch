@@ -1,0 +1,131 @@
+function Arithmetic(){
+    var n1=10
+var n2=20
+var sum=n1+n2;
+console.log(sum);
+}
+
+
+Arithmetic()
+
+let name = function(){
+    var n1=12;
+    var n2=13;
+    var sum = n1+n2;
+    console.log(sum)
+}
+name()
+VM832:5 25
+undefined
+name
+ƒ (){
+    var n1=12;
+    var n2=13;
+    var sum = n1+n2;
+    console.log(sum)
+}
+
+
+Anonymous function ---->
+function F2(a,b){
+    console.log(a);
+    console.log(b);
+}
+undefined
+F2(12,23)
+VM1149:2 12
+VM1149:3 23
+undefined
+function f1(){
+    let re = 23;
+    let c = 24;
+    console.log("a",re + "b" + c);
+}
+undefined
+f1()
+VM1359:4 a 23b24
+undefined
+function f3(a,b){
+     return a+b;
+}
+
+undefined
+f3(2,3);
+5
+function f5(){
+    let a2 = 27;
+    let b2 = 45
+     return a*b;
+}
+
+undefined
+f5()
+VM1436:4 Uncaught ReferenceError: a is not defined
+    at f5 (<anonymous>:4:6)
+    at <anonymous>:1:1
+f5 @ VM1436:4
+(anonymous) @ VM1446:1
+function f5(){
+    let a2 = 27;
+    let b2 = 45
+     return a2*b2;
+}
+
+undefined
+f5()
+1215
+let res = function(){
+    console.log("Function CAlled");
+}
+
+undefined
+res
+ƒ (){
+    console.log("Function CAlled");
+}
+res()
+VM1535:2 Function CAlled
+undefined
+
+
+
+--------------------------->
+let res = f1(12,(function(){
+    console.log( "A called");
+}))
+VM1853:2 12
+VM1946:2 A called
+undefined
+function f2(a,b,c){
+    console.log(a,b,c);
+}
+undefined
+f2(12,34)
+VM2017:2 12 34 undefined
+undefined
+function f2(a,b){
+    console.log(a,b,c);
+}
+undefined
+f2(12,23,4)
+VM2048:2 Uncaught ReferenceError: c is not defined
+    at f2 (<anonymous>:2:21)
+    at <anonymous>:1:1
+f2 @ VM2048:2
+(anonymous) @ VM2079:1
+function f2(a,b,c,d){
+    console.log(a,b,c,d);
+}
+undefined
+f2(23,12)
+VM2095:2 23 12 undefined undefined
+undefined
+function f2(a,b,c,d){
+    console.log(a,b);
+}
+undefined
+f2(23,12)
+VM2139:2 23 12
+undefined
+null + undefined
+NaN

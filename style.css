@@ -1,3 +1,47 @@
 #div{
     letter-spacing: 3px;
 }
+img{
+    height:30px;
+    width:50px;
+    position:relative;
+    top:6px;
+    
+}
+/* body{
+    background-color: rgb(190, 180, 180);
+} */
+.clr{
+    color:white
+}
+.font{
+    font-size: 20px;
+    font-weight: bold;
+}
+input{
+    padding:10px 100px 10px 30px;
+    border-radius: 22px;
+}
+.ref{
+    background-color: rgb(116, 207, 207);
+    color:black
+}
+p {
+    outline: 16px solid red;
+    padding:34px;
+}
+#flower{
+    padding:12px;
+}
+.div1 {
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue;
+  }
+  
+  .div2 {
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    border: 1px solid red;
+  }
