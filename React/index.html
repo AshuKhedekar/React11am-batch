@@ -1,0 +1,21 @@
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<div id="root"></div>
+<script type="text/babel">
+    function Hello(obj){
+        return <div><img src={obj.img} height="200" width="200"/>
+            <h2>{obj.name}</h2></div>
+    }
+    
+    function App(){
+        return <div>
+            <Hello name="Nature Images" img="download.jpg"/>
+            <Hello name="Nature Images" img="download 1.jpg"/>
+            <Hello name="Nature Images" img="download2.jpg"/>
+            <Hello name="Nature Images" img="download3.jpg"/>
+            </div>
+    }
+   let root =  ReactDOM.createRoot(document.getElementById('root'));
+   root.render(<App/>)
+</script>
