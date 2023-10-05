@@ -1,0 +1,26 @@
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<div id="root"></div>
+<script type="text/babel">
+    const Box=({image,heading})=>{
+        return <div style={{ marginBottom:"12px",textAlign:"center",lineHeight:"100px", display:"inline-block",marginLeft:"12px"}}>
+            <figure>
+            <img height="200px" width="200px" style={{border:"2px solid red", }}  src={image}/>
+            
+            <figcaption>{heading}</figcaption>
+            </figure>
+            </div>
+          
+        //   const {img,heading} =props
+    }
+    function App(){
+        return (
+            <div>
+        <div><Box image="download 1.jpg" heading="Nature" /><Box image="download.jpg" heading="Flowers"></Box></div>
+        <div><Box image="download2.jpg" heading="React"/><Box image="download3.jpg" heading="Html"/></div>
+        </div>)
+    }
+let root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App/>)
+</script>

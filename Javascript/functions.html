@@ -129,3 +129,76 @@ VM2139:2 23 12
 undefined
 null + undefined
 NaN
+
+
+-------------------------------------->
+1 . Singleton class using a function
+
+'use strict'
+let obj = new function(){
+    this.type = 'MEXICON LIME';
+    this.color= "green";
+    this.getInformation = function(){
+        return 'this ' + this.type + ' is ' +this.color+ ' .';
+    }
+}
+'use strict'
+console.log(obj.getInformation());
+VM390:1 this MEXICON LIME is green .
+undefined
+obj.color="red";
+'red'
+obj.getInformation();
+'this MEXICON LIME is red .'
+-------------------------------------->
+2. We can't hoisted class declaration in class 
+
+try{
+    let p = new Polygon(1,2);
+    console.log("Polygon",p);
+}
+catch(exception){
+console.log("exception" ,exception);
+}
+
+  
+ exception ReferenceError: Polygon is not defined
+
+
+class Polygon {
+constructor(height,width){
+this.height=height;
+this.width=width;
+}
+}
+let p = new Polygon(1,2);
+=======================================>
+we can hoisted function declaration in function class 
+try{
+    let a = new Bus();
+    console.log(a);
+}
+catch(exception){
+    console.log("exception",exception);
+}
+function Bus(height,width){
+    
+    this.height=height;
+    this.width=width;
+
+}
+let obj = new Bus(1,2);
+
+==================================>
+named class expression using class keyword
+let Polygon = class {
+    constuctor(h,w){
+        this.height=h;
+        this.width=w;
+    }
+        getResult(){
+            return this.height* this.width;
+        }
+ 
+    
+}

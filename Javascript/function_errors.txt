@@ -1,0 +1,193 @@
+function f1(){
+    let a= 12;
+    let b = 23;
+    let res = a + b;
+    console.log(res);
+}
+undefined
+f1();
+VM191:5 35
+undefined
+function f1(a,b){
+    console.log(a+b);
+}
+    
+undefined
+f1(23,34);
+VM241:2 57
+undefined
+function f1(){
+    let c = 20;
+    let d = 30;
+    return c+d;
+}
+undefined
+f1()
+50
+function f1(a,b){
+    return a+b;
+}
+undefined
+f1(20,12);
+32
+
+
+    1. Anonymous function 
+    ---->function f1(a,b){
+    a();
+    console.log(b);
+}
+undefined
+f1((function(){
+    console.log("F2 called");
+}),12);
+VM763:2 F2 called
+VM638:3 12
+undefined
+
+
+2. hof (higher order function ) function --->
+function f1(a,b){
+    a();
+    console.log(b);
+}
+undefined
+function f2(){
+    console.log("f2 called");
+}
+undefined
+f1(f2,12);
+VM962:2 f2 called
+VM883:3 12
+undefined
+
+
+Errors --- >let a =20;
+function f1(){
+    a=23;
+    console.log(a);
+}
+console.log(a);
+f1()
+VM1046:6 20
+VM1046:4 23
+undefined
+// let a =20;
+function f1(){
+    a=23;
+    // console.log(a);
+}
+console.log(a);
+f1()
+VM1050:6 23
+
+
+function f1(){
+    let a=12;
+    if(a==12){
+        a=23;
+    }
+    console.log(a);
+}
+undefined
+f1()
+VM1321:6 23
+undefined
+function f1(){
+    let a=12;
+    if(a==12){
+       let a=23;
+    }
+    console.log(a);
+}
+undefined
+f1()
+VM1337:6 12
+undefined
+function f1(){
+   const a =21
+    if(a==12){
+       let a=23;
+    }
+    console.log(a);
+}
+undefined
+f1()
+VM1352:6 21
+undefined
+function f1(){
+   const a =21
+    if(a==12){
+        a=23;
+    }
+    console.log(a);
+}
+undefined
+f1()
+VM1367:6 21
+undefined
+function f1(){
+   const a =21
+    a=23
+    console.log(a);
+}
+undefined
+f1()
+VM1381:3 Uncaught TypeError: Assignment to constant variable.
+    at f1 (<anonymous>:3:6)
+    at <anonymous>:1:1
+f1 @ VM1381:3
+(anonymous) @ VM1391:1
+function f1(){
+    console.log(a);
+    var a;
+}
+undefined
+f1()
+VM1483:2 undefined
+undefined
+function f1(){
+    console.log(a);
+    var a=12;
+}
+undefined
+f1()
+VM1495:2 undefined
+undefined
+a
+10
+function f1(){
+    console.log(a);
+    let a=12;
+}
+undefined
+f1()
+VM1517:2 Uncaught ReferenceError: Cannot access 'a' before initialization
+    at f1 (<anonymous>:2:17)
+    at <anonymous>:1:1
+f1 @ VM1517:2
+(anonymous) @ VM1527:1
+function f1(){
+    console.log(a);
+    const a=12;
+}
+undefined
+f1()
+VM1530:2 Uncaught ReferenceError: Cannot access 'a' before initialization
+    at f1 (<anonymous>:2:17)
+    at <anonymous>:1:1
+f1 @ VM1530:2
+(anonymous) @ VM1540:1
+function f1(){
+   const a;
+    console.log(a)
+}
+VM1552:2 Uncaught SyntaxError: Missing initializer in const declaration
+function f1(){
+   let a;
+    console.log(a)
+}
+undefined
+f1()
+VM1555:3 undefined
+undefined

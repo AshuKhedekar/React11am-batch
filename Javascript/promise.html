@@ -1,0 +1,86 @@
+const count = true;
+let countValue = new Promise(function(resolve,reject){
+    if(count){
+        resolve("there is a count value");
+    }
+    else{
+        reject("there is no any count value");
+    }
+});
+console.log(countValue);
+VM331:10 Promise {<fulfilled>: 'there is a count value'}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: "there is a count value"
+undefined
+    let countValue = new Promise(function(resolve,reject){
+        resolve("Promise Resolved");
+    });
+countValue.then(function successValue(result){
+    console.log(result);
+});
+VM610:5 Promise Resolved
+Promise {<fulfilled>: undefined}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: undefined
+.then(function successValue1(){
+    console.log("you can call multiple function this way");
+});
+
+=============================>
+let countValue = new Promise(function(resolve,reject){
+    resolve("Promise Resolved");
+});
+countValue.then(function successValue(result){
+console.log(result);
+}).then(function successValue1(){
+console.log("you can call multiple function this way");
+})
+VM894:5 Promise Resolved
+VM894:7 you can call multiple function this way
+
+let countValue = new Promise(function(resolve,reject){
+    reject("Promise Rejected");
+});
+countValue.then(function successValue(result){
+console.log(result);
+})
+.catch(function errorValue(e){
+console.log("error");
+});
+VM1088:8 error
+Promise {<fulfilled>: undefined}
+
+================================>
+    const promise = new Promise(function(resolve,reject){
+        setTimeout(()=> console.log("Done"),2000);
+    });
+    undefined
+    VM1289:2 Done
+    const promise = new Promise(function(resolve,reject){
+        setTimeout(()=> resolve("Done"),2000);
+    });
+    undefined
+    promise
+    Promise {<fulfilled>: 'Done'}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: "Done"
+    const promise = new Promise((resolve,reject)=>{
+        const num = Math.random();
+        if(num >= 0.5){
+            resolve("Promise is fulfilled");
+        }
+        else{
+            reject("Promise failed");
+        }
+    });
+    undefined
+    promise
+
+    --------------------->
+    const promise = new Promise((resolve,reject)=>{
+        const num = 12;
+        console.log(num);
+        if(num < 0.5){
+       resolve("Promise is fulfilled");   
+        }
+        else{
+             reject("Promise failed");
+        }
+    });
+    VM1570:3 12
+    undefined
+    VM1570:8 Uncaught (in promise) Promise failed

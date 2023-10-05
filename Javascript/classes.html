@@ -1,0 +1,72 @@
+We can Write js classes in types
+1.class keyword
+2.function class
+
+
+
+class Bus{
+    constructor(a,b){
+    this.name=a;
+    this.color=b;
+    }
+    getColor(){
+     
+        return "His name is " + this.name + " his fav clr " + this.color + ".";
+    }
+    
+
+}
+undefined
+let obj = new Bus("sachin","blue");
+undefined
+obj.getColor()
+'His name is sachin his fav clr blue.'
+function Car(name,color){
+    this.name=name;
+    this.color=color;
+    this.getColor = function (){
+        return "THis name is " + this.name + " his fav clr " + this.color + ".";
+    }
+}
+undefined
+let obj2 = new Car("dhoni","red");
+undefined
+obj2
+Car {name: 'dhoni', color: 'red', getColor: ƒ}
+obj2.getColor()
+'THis name is dhoni his fav clr red.'
+
+-------------------------------------->
+function Bus(){
+    this.a = "sachin";
+}
+class Car extends Bus{
+
+}
+class App extends React.component
+let a = 23;
+res = a;
+this.state = {
+    a:23
+}
+
+setState({this.state.a:"sachin"})
+------------------------------------------->
+
+function Bus(){
+    this.a = 12;
+}
+class Car extends Bus{
+    constructor(b){
+        super();
+    this.b=34;
+    }
+    getResult(){
+        return this.a+this.b;
+    }
+}
+undefined
+let car = new Car();
+undefined
+car.getResult()
+46
